@@ -5,28 +5,30 @@ import { BrowserRouter as Router, Routes, Route, createBrowserRouter, RouterProv
 import Register from './components/auth/Register'
 import { Home } from 'lucide-react';
 import Login from './components/auth/Login';
+import { Toaster } from 'sonner';
 
 const App = () => {
- const appRouter = createBrowserRouter([
-  {
-     path: "/",
-     
-  },
-  {
-    path: "/register",
-    element: <Register />,
-  },
-  { 
-    path: "/login", 
-    element: <Login />,
-  },
+  const appRouter = createBrowserRouter([
+    {
+      path: "/",
 
- ])
+    },
+    {
+      path: "/register",
+      element: <Register />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+
+  ])
   return (
     <div>
-   <RouterProvider router={appRouter}/>
-   <Navbar />
-   </div>
+      <Navbar />
+      <Toaster position="top-center" />
+      <RouterProvider router={appRouter} />
+    </div>
   )
 }
 
