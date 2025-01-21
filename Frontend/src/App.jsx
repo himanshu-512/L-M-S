@@ -6,6 +6,8 @@ import Register from './components/auth/Register'
 import Home from './components/Home';
 import Login from './components/auth/Login';
 import { Toaster } from 'sonner';
+import Filter from './components/pages/student/Filter';
+import FilterSection from './components/pages/student/Filter';
 
 const App = () => {
   const appRouter = createBrowserRouter([
@@ -21,7 +23,10 @@ const App = () => {
       path: "/login",
       element: <Login />,
     },
-
+    {
+      path: "/explore",
+      element: <FilterSection />,
+    },
   ])
   return (
     <div>

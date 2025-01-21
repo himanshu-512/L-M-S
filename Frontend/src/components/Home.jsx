@@ -9,7 +9,6 @@ const Home = () => {
       <Navbar />
       <HeroSection />
       <Courses />
-      
     </div>
   )
 }

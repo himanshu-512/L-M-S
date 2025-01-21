@@ -1,5 +1,5 @@
-import { Course } from "../models/course.model";
-import { User } from "../models/user.model";
+import { Course } from "../models/course.model.js";
+import { User } from "../models/user.model.js";
 
 
 
